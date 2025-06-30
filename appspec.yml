@@ -6,6 +6,9 @@ files:
 
 hooks:
   AfterInstall:
+    - location: scripts/make_executable.sh
+      timeout: 300
+      runas: ubuntu
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ubuntu
@@ -13,4 +16,3 @@ hooks:
     - location: scripts/start_server.sh
       timeout: 300
       runas: ubuntu
-
