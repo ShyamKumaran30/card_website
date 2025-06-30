@@ -3,12 +3,13 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/card-website
+    overwrite: true
 
 hooks:
   AfterInstall:
     - location: scripts/make_executable.sh
       timeout: 300
-      runas: ubuntu
+      runas: root
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ubuntu
